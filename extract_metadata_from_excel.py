@@ -1,6 +1,5 @@
 import pandas as pd
 import json
-import time
 
 data = pd.read_excel('DOBLINS_TRAITS.xlsx')
 
@@ -49,15 +48,11 @@ for index, row in data.iterrows():
       attributes.extend([{"trait_type": "HAT", "value": hat_value},{"trait_type": "HAIR", "value": hair_value},{"trait_type": "ACCESSORIES", "value": accessories_value}])
       
     num_id = row[0]
-    t = time.time()
-    t_ms = int(t * 1000)
     
     metadata = {
       "name": "Doblins #"+str(num_id),
       "description": "Doblins is a limited 111 PFP collection nesting on the Ethereum network.",
       "image": "ipfs://IPFS_URL/{}.png".format(num_id),
-      "edition": int(num_id),
-      "date": t_ms ,
       "attributes": attributes
       }
       
