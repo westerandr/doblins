@@ -58,7 +58,7 @@ for index, row in data.iterrows():
       
     
     json_filename = str(num_id) + ".json" 
-    with open("metadata/"+json_filename, 'w') as j:
+    with open("json/"+json_filename, 'w') as j:
       json.dump(metadata, j, indent=2)
     print(num_id, metadata)
     
