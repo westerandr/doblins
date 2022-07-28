@@ -1371,7 +1371,7 @@ contract Doblins is Ownable, ReentrancyGuard, ERC721A {
     require(tx.origin == msg.sender, "Doblins: No contracts allowed");
     require(_amount > 0, "Doblins: you must mint at least 1 token");
     require(totalSupply() + _amount <= maxSupply, "Doblins: max supply reached");
-    require(numMinted[msg.sender] + _amount < maxMint, "Doblins: you have reached the maximum number of tokens per wallet");
+    require(numMinted[msg.sender] + _amount <= maxMint, "Doblins: you have reached the maximum number of tokens per wallet");
     require(msg.value >= cost * _amount, "Doblins: you must pay the cost of each token");
     _mint(msg.sender, _amount, "", true);
     numMinted[msg.sender] += _amount;
