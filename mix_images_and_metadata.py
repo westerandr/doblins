@@ -10,7 +10,7 @@ def replace_file_with_json_data(file_string, json_data):
     json.dump(json_data, f, indent=2)
 
 # check if metadata folder is empty
-if not os.listdir('metadata'):
+if not os.listdir('json'):
   #exit 
   print('metadata folder is empty, please extract first')
   exit()

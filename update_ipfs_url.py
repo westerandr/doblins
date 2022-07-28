@@ -20,7 +20,7 @@ for data in metadata_files:
     # print(type(json_data))
 
     # replace placeholder text
-    json_data["image"] = "https://ipfs.io/ipfs/" + CID + "/" + str(num) + ".png"
+    json_data["image"] = "ipfs://" + CID + "/" + str(num) + ".png"
     
   # write to file
   with open("json/"+data, "w") as f:
