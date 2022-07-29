@@ -1383,6 +1383,11 @@ contract Doblins is Ownable, ReentrancyGuard, ERC721A {
 
   }
 
+   function _startTokenId() internal view virtual override returns (uint256) {
+     return 1;
+  }
+
+
   receive() external payable {}
 
   function withdraw() public onlyOwner {
