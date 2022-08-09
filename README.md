@@ -1,1 +1,1 @@
-# doblins
+# doblins nft project
