@@ -48,7 +48,7 @@ def mix(num_1, num_2):
   
   print("Swapped #{} and #{}".format(num_1, num_2))
 
-
+# Disclaimer: The numbers used here were randomly generated to separate all the rare nfts from being next to each other
 mix(3, 22)
 mix(22, 85)
 mix(16, 72)
